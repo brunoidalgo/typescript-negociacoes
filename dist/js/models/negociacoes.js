@@ -6,6 +6,6 @@ export class Negociacoes {
         this.negociacoes.push(negociacao);
     }
     list() {
-        return this.negociacoes;
+        return [...this.negociacoes];
     }
 }
