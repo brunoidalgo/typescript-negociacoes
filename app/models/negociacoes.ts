@@ -1,14 +1,16 @@
 import { Negociacao } from "./negociacao";
 
 export class Negociacoes {
-    private negociacoes: Array<Negociacao> = [];
+    // Escrevendo Array<Generics> sem o generics.
+    private negociacoes:Array<Negociacao> = [];
 
     adiciona(negociacao: Negociacao) {
         this.negociacoes.push(negociacao);
     }
 
-    list(): ReadonlyArray<Negociacao> {
+    // Antes ArrayReadOnly<Negociacao> somente leitura.
+    list(): readonly Negociacao[] {
         return [...this.negociacoes];
     }
 
-}
+};
